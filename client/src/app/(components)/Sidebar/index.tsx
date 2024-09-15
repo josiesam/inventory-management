@@ -12,6 +12,7 @@ import {
   SlidersHorizontal,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -76,7 +77,14 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <div>logo</div>
+        <div>
+        <Image 
+                src="https://s3-inventorymanagement-123.s3.us-east-2.amazonaws.com/logo.png"
+                alt="logo"
+                width={27}
+                height={27}
+                className="rounded-full w-8" />
+        </div>
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
